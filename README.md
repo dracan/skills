@@ -28,8 +28,8 @@ Skills then appear namespaced, e.g. `/danclarke:one-at-a-time`.
 Or copy a skill directory straight in, which keeps the bare name (`/one-at-a-time`):
 
 ```bash
-git clone https://github.com/dracan/skills.git
-cp -r skills/skills/one-at-a-time ~/.claude/skills/
+git clone https://github.com/dracan/skills.git dracan-skills
+cp -r dracan-skills/skills/one-at-a-time ~/.claude/skills/
 ```
 
 ## GitHub Copilot CLI
@@ -38,11 +38,11 @@ Copilot reads personal skills from `~/.copilot/skills`, which matches this repo'
 layout, so one symlink gives you every skill and `git pull` keeps them current:
 
 ```bash
-git clone https://github.com/dracan/skills.git
-ln -s "$PWD/skills/skills" ~/.copilot/skills
+git clone https://github.com/dracan/skills.git dracan-skills
+ln -s "$PWD/dracan-skills/skills" ~/.copilot/skills
 ```
 
-Prefer copying? `cp -r skills/skills/* ~/.copilot/skills/` works the same way.
+Prefer copying? `cp -r dracan-skills/skills/* ~/.copilot/skills/` works the same way.
 
 Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
 Note that Copilot may also activate a skill on its own when it judges it relevant,
