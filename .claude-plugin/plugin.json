@@ -1,0 +1,10 @@
+{
+  "name": "danclarke",
+  "description": "Skills that make an AI agent work through things one step at a time.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Dan Clarke"
+  },
+  "homepage": "https://github.com/dracan/skills",
+  "license": "MIT"
+}

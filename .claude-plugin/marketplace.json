@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "dracan-skills",
+  "description": "Dan Clarke's public Claude Code skills.",
+  "owner": {
+    "name": "Dan Clarke",
+    "url": "https://github.com/dracan"
+  },
+  "plugins": [
+    {
+      "name": "danclarke",
+      "description": "Skills that make an AI agent work through things one step at a time.",
+      "author": {
+        "name": "Dan Clarke"
+      },
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://github.com/dracan/skills"
+    }
+  ]
+}
