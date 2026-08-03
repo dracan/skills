@@ -34,15 +34,24 @@ cp -r dracan-skills/skills/one-at-a-time ~/.claude/skills/
 
 ## GitHub Copilot CLI
 
-Copilot reads personal skills from `~/.copilot/skills`, which matches this repo's
-layout, so one symlink gives you every skill and `git pull` keeps them current:
+Copilot reads personal skills from `~/.copilot/skills`, one directory per skill. That
+directory is shared with every other skill you have, so link the individual skills you
+want into it rather than pointing it at this repo:
 
 ```bash
 git clone https://github.com/dracan/skills.git dracan-skills
-ln -s "$PWD/dracan-skills/skills" ~/.copilot/skills
+mkdir -p ~/.copilot/skills
+ln -s "$PWD/dracan-skills/skills/one-at-a-time" ~/.copilot/skills/
 ```
 
-Prefer copying? `cp -r dracan-skills/skills/* ~/.copilot/skills/` works the same way.
+Symlinking means `git pull` in the clone keeps the skill current. Use `cp -r` in place
+of `ln -s` if you would rather hold your own copy.
+
+To take everything here, loop over the directory:
+
+```bash
+for skill in "$PWD"/dracan-skills/skills/*/; do ln -s "$skill" ~/.copilot/skills/; done
+```
 
 Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
 Note that Copilot may also activate a skill on its own when it judges it relevant,
