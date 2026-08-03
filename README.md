@@ -1,8 +1,10 @@
 # Skills
 
-My public agent skills. They are plain `SKILL.md` files, so they work in
-[Claude Code](https://claude.com/claude-code), [GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills),
-and anything else that reads the format.
+My public agent skills. The repo is a plugin that installs the same way in both
+[Claude Code](https://claude.com/claude-code) and
+[GitHub Copilot CLI](https://docs.github.com/en/copilot/how-tos/copilot-cli/customize-copilot/add-skills),
+and the skills themselves are plain `SKILL.md` files, so they also work in anything
+else that reads the format.
 
 The thread running through them: an agent that dumps everything at once is hard to
 think alongside. These skills make it go one step at a time, so you can steer it
@@ -55,8 +57,13 @@ copilot skill add https://github.com/dracan/skills/tree/main/skills/one-at-a-tim
 That installs into `~/.copilot/skills`, alongside whatever else you keep there.
 
 Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
-Note that Copilot may also activate a skill on its own when it judges it relevant,
-which Claude Code lets a skill opt out of and Copilot does not.
+Two differences from Claude Code worth knowing:
+
+- Copilot does not namespace plugin skills, so it is `/one-at-a-time` however you
+  installed it. If you already have a skill of that name, yours wins and this one is
+  silently ignored.
+- Copilot may also activate a skill on its own when it judges it relevant. Claude Code
+  lets a skill opt out of that; Copilot has no equivalent.
 
 For a skill scoped to one repository rather than your whole machine, put it in that
 repo's `.github/skills/` instead.
