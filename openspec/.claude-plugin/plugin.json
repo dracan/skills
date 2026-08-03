@@ -1,0 +1,8 @@
+{
+  "name": "dc-openspec",
+  "description": "Skills for driving an OpenSpec workflow. Assumes OpenSpec is set up in the repository you are working in.",
+  "version": "1.0.0",
+  "author": { "name": "Dan Clarke" },
+  "homepage": "https://github.com/dracan/skills",
+  "license": "MIT"
+}

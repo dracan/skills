@@ -8,14 +8,21 @@
   },
   "plugins": [
     {
-      "name": "danclarke",
-      "description": "Skills that make an AI agent work through things one step at a time.",
+      "name": "dc",
+      "description": "Skills that make an AI agent work through things one step at a time. No prerequisites.",
       "version": "1.0.0",
-      "author": {
-        "name": "Dan Clarke"
-      },
+      "author": { "name": "Dan Clarke" },
       "category": "productivity",
-      "source": "./",
+      "source": "./core",
+      "homepage": "https://github.com/dracan/skills"
+    },
+    {
+      "name": "dc-openspec",
+      "description": "Skills for driving an OpenSpec workflow. Assumes OpenSpec is set up in the repository you are working in.",
+      "version": "1.0.0",
+      "author": { "name": "Dan Clarke" },
+      "category": "development",
+      "source": "./openspec",
       "homepage": "https://github.com/dracan/skills"
     }
   ]
