@@ -56,14 +56,11 @@ copilot skill add https://github.com/dracan/skills/tree/main/skills/one-at-a-tim
 
 That installs into `~/.copilot/skills`, alongside whatever else you keep there.
 
-Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
-Two differences from Claude Code worth knowing:
+Skills are namespaced here just as they are in Claude Code. Invoke one by naming it in
+your prompt, e.g. "use the /danclarke:one-at-a-time skill".
 
-- Copilot does not namespace plugin skills, so it is `/one-at-a-time` however you
-  installed it. If you already have a skill of that name, yours wins and this one is
-  silently ignored.
-- Copilot may also activate a skill on its own when it judges it relevant. Claude Code
-  lets a skill opt out of that; Copilot has no equivalent.
+Copilot may also activate a skill on its own when it judges it relevant. Claude Code
+lets a skill opt out of that; Copilot has no equivalent.
 
 For a skill scoped to one repository rather than your whole machine, put it in that
 repo's `.github/skills/` instead.
