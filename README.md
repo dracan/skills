@@ -50,7 +50,7 @@ of `ln -s` if you would rather hold your own copy.
 To take everything here, loop over the directory:
 
 ```bash
-for skill in "$PWD"/dracan-skills/skills/*/; do ln -s "$skill" ~/.copilot/skills/; done
+for skill in "$PWD"/dracan-skills/skills/*/; do ln -sfn "$skill" ~/.copilot/skills/; done
 ```
 
 Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
