@@ -34,24 +34,25 @@ cp -r dracan-skills/skills/one-at-a-time ~/.claude/skills/
 
 ## GitHub Copilot CLI
 
-Copilot reads personal skills from `~/.copilot/skills`, one directory per skill. That
-directory is shared with every other skill you have, so link the individual skills you
-want into it rather than pointing it at this repo:
+Copilot CLI reads the same plugin and marketplace manifests as Claude Code, so this
+repo installs the same way:
 
-```bash
-git clone https://github.com/dracan/skills.git dracan-skills
-mkdir -p ~/.copilot/skills
-ln -s "$PWD/dracan-skills/skills/one-at-a-time" ~/.copilot/skills/
+```
+/plugin marketplace add dracan/skills
+/plugin install danclarke@dracan-skills
 ```
 
-Symlinking means `git pull` in the clone keeps the skill current. Use `cp -r` in place
-of `ln -s` if you would rather hold your own copy.
+Or from the terminal, `copilot plugin marketplace add dracan/skills` followed by
+`copilot plugin install danclarke@dracan-skills`.
 
-To take everything here, loop over the directory:
+To add a single skill without the plugin, point `copilot skill add` at its directory
+or URL:
 
 ```bash
-for skill in "$PWD"/dracan-skills/skills/*/; do ln -sfn "$skill" ~/.copilot/skills/; done
+copilot skill add https://github.com/dracan/skills/tree/main/skills/one-at-a-time
 ```
+
+That installs into `~/.copilot/skills`, alongside whatever else you keep there.
 
 Invoke a skill by naming it in your prompt, e.g. "use the /one-at-a-time skill".
 Note that Copilot may also activate a skill on its own when it judges it relevant,
