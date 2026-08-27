@@ -9,7 +9,7 @@
   "plugins": [
     {
       "name": "dc",
-      "description": "Skills that make an AI agent work through things one step at a time. No prerequisites.",
+      "description": "Skills that make an AI agent work through things at my pace. No prerequisites.",
       "version": "1.0.0",
       "author": { "name": "Dan Clarke" },
       "category": "productivity",
