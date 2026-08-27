@@ -1,5 +1,5 @@
 ---
-name: wrap-up
+name: anything-left
 description: Before I close this session, check whether anything is left to finish or worth capturing, and list it for me. Only run this when I explicitly ask for it.
 disable-model-invocation: true
 ---
