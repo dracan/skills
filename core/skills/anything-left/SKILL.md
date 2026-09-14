@@ -18,6 +18,12 @@ Check for all of these:
   than relying on what you remember. Report a dirty tree, staged-but-uncommitted
   changes, unpushed commits, and any files we created that were never added or cleaned
   up.
+- 🤖 **Background agents.** List the live agents (ListAgents, or whatever this harness
+  provides) rather than relying on what you remember spawning. For each subagent,
+  teammate or workflow still listed, say whether it is running or idle, whether its
+  result has been collected, and what closing the session would lose: work in flight,
+  or a report I never saw. Idle agents whose results are already in hand cost nothing
+  to drop; say so, so I do not have to ask.
 - 💬 **Facts that only exist in the conversation.** Preferences I stated, the
   corrections I gave you, decisions we reached and the reasoning behind them, none of
   which are written down. Anything worth keeping belongs in a source-controlled file in
@@ -26,7 +32,7 @@ Check for all of these:
   information the next person pulling the project down will not have.
 - 📄 **Stale docs and specs.** README, CLAUDE.md, or OpenSpec changes that this session's
   work has made out of date or left un-archived.
-- 🧩 **Anything else.** The four above are the usual suspects, not the whole list. If
+- 🧩 **Anything else.** The five above are the usual suspects, not the whole list. If
   something else from this session would be lost and I would not want it to be, say so.
 
 Then give me a short list, grouped by those headings, skipping any heading with nothing
