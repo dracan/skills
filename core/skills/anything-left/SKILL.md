@@ -23,7 +23,7 @@ Check for all of these:
   teammate or workflow still listed, say whether it is running or idle, whether its
   result has been collected, and what closing the session would lose: work in flight,
   or a report I never saw. Idle agents whose results are already in hand cost nothing
-  to drop; say so, so I do not have to ask.
+  to drop; put that reassurance in the checks summary, not the action list.
 - 💬 **Facts that only exist in the conversation.** Preferences I stated, the
   corrections I gave you, decisions we reached and the reasoning behind them, none of
   which are written down. Anything worth keeping belongs in a source-controlled file in
@@ -35,20 +35,43 @@ Check for all of these:
 - 🧩 **Anything else.** The five above are the usual suspects, not the whole list. If
   something else from this session would be lost and I would not want it to be, say so.
 
-Then give me a short list, grouped by those headings, skipping any heading with nothing
-under it. One line per item, saying what it is and what closing the session would cost
-me. Where you are guessing rather than certain, mark it 🤔 rather than leaving
-me to work out which parts you are sure of.
+Report findings by action status, using these sections in order and omitting empty
+sections. Keep the investigative categories above as checks, not output headings.
 
-Lead each heading with the emoji it carries above, and keep the item lines themselves
-plain. I am reading this at the end of a session when my attention is going, and I want
-to find the section I care about without reading the whole thing. That only works while
-the emoji mean something, so do not sprinkle more through the prose.
+### 🚧 Actions before closing
 
-If there is genuinely nothing outstanding, tell me that in one line, led with ✅. Do
-not pad the list to look thorough - a false alarm at this point costs me more than it
-saves, because I have to go and check it.
+Use a short numbered list of work that can still be finished, decisions I need to
+make, or information that needs recording or preserving. Start each item with a
+concrete verb and say what leaving it would cost me, in one line. Recording
+unfinished work does not make it complete if it can still be done this session.
+Include only actions supported by evidence, not speculative cleanup.
 
-Then stop and ask me which of them, if any, you should deal with. Do not start on any of
-it until I have picked. That includes committing, pushing, and editing tracked files: I
-want to choose what gets recorded, not discover it afterwards.
+### ⏳ Waiting or deliberately deferred
+
+Include work awaiting an external dependency or explicitly postponed by me, with
+its status and next step already recorded. One line per item: what is pending,
+what will allow it to resume, and where its handover is recorded. These need no
+action before closing. If the handover is missing, recording it belongs in the
+action list instead.
+
+### ✅ Checked and clear
+
+At most one compact line summarising useful reassurance, for example:
+"Git clean and pushed; research agent completed, findings captured, safe to drop."
+For any remaining background agent, identify its status and whether its result is
+captured in the appropriate section; running work or uncaptured results require an
+action or decision. A check that could not run is an uncertainty, not an all-clear.
+
+Use emojis only in the section headings, except 🤔 to mark an uncertain finding.
+Keep the output short. The checks can be comprehensive without listing every
+successful check in the response. Do not repeat an item across sections.
+
+If there are no actions before closing, lead with "No action needed before closing."
+Still show a waiting section if relevant. If there is neither action nor waiting,
+respond with one line led with ✅, including any useful checks summary.
+
+When there are actions, finish by asking which numbered items, if any, I want you to
+handle. Then stop. Do not start any action until I have picked, including committing,
+pushing, or editing tracked files. This skill audits and proposes; it does not
+execute the findings. When only waiting or clear items remain, say it is safe to
+close rather than asking me to select work that cannot or need not be done now.
