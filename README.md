@@ -33,6 +33,7 @@ Skills that make an agent work through things at my pace. No prerequisites.
 | --- | --- |
 | `/dc:one-at-a-time` | Ask me one question at a time, and give me one piece of information at a time. |
 | `/dc:anything-left` | Before closing a session, list what is left to finish or worth capturing, then wait for me to pick. |
+| `/dc:teach-me` | Teach me a topic one level of depth at a time, checking my understanding before going deeper. |
 
 ```
 /plugin install dc@dracan-skills
